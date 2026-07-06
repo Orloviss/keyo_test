@@ -1,0 +1,65 @@
+@use "../variables" as *;
+
+.company {
+  &-card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 calc(50% - 1rem);
+    padding: 2rem;
+    border: 1px solid $color-border;
+    border-radius: 0.25rem;
+    box-sizing: border-box;
+  }
+
+  &-logo {
+    display: flex;
+    justify-content: flex-start;
+
+    img {
+      width: 10rem;
+      height: 6.25rem;
+      object-fit: contain;
+      object-position: left;
+    }
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+  }
+
+  &-desc {
+    flex: 1;
+  }
+
+  &-action {
+    margin-top: auto;
+  }
+
+  &-link {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.card {
+  &-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+@media screen and (width <= 1024px) {
+  .company {
+    &-card {
+      flex: 100%;
+       padding: 1rem;
+    }
+  }
+}
